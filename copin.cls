@@ -144,25 +144,25 @@
     {\LARGE Universidade Federal de Campina Grande \par}
     {\LARGE Centro de Engenharia El\'{e}trica e Inform\'{a}tica \par}
     {\Large Coordena\c{c}\~{a}o de P\'{o}s-Gradua\c{c}\~{a}o em Ci\^{e}ncia da Computa\c{c}\~{a}o\par}
-    \vskip 4em%
+    \vskip 3em%
     {\LARGE \@Titulo \par}%
     {\LARGE
-    \vskip 3em%
+    \vskip 2em%
       \begin{tabular}[t]{c}%
         \@Autor
       \end{tabular}\par}%
-    \vskip 3em%
+    \vskip 2em%
 
    \if@rpd
    \else
-\selectlanguage{portuges}
+\selectlanguage{brazilian}
    \parbox[t]{122mm}{ \manuscrito\hspace{1pt} submetida \`{a} Coordena\c{c}\~{a}o do Curso de P\'{o}s-Gradua\c{c}\~{a}o em Ci\^{e}ncia da Computa\c{c}\~{a}o da Universidade Federal de Campina Grande - Campus I como parte dos requisitos necess\'{a}rios para obten\c{c}\~{a}o do grau de \Grau.
-\ \vskip 4em \begin{center} \'Area de
+\ \vskip 2em \begin{center} \'Area de
    Concentra\c{c}\~{a}o: \@Area \\
    Linha de Pesquisa: \@Pesquisa
    \end{center}}
    \fi
-   \vskip 3em%
+   \vskip 2em%
    \@Orientadores \par
   \@thanks
   \vfil\null
