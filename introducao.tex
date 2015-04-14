@@ -1,28 +1,60 @@
 \chapter{Introdução}
-\begin{itemize}
-    \item Sites de q\&a são alvos de vários estudos sobre obter/melhorar respostas e achar \textit{experts}, como REF1, REF2, etc.;
-    \item Além disso, a forma como os usuários interagem com tais sites também é investigada na literatura, como REF1, REF2, etc.;
-    \item (Falar do Forrósquare aqui->) Dado um esforço preliminar para criar, manter e observar in loco um site de q\&a com o intuito de se elencar novos possíveis estudos a serem realizados, identificou-se a necessidade de abordar o uso do compartilhamento de perguntas em redes sociais para ajudar a obter respostas;
-    \item Explicar bem resumidamente o que foi feito a partir daí.
+    \begin{itemize}
+        \item O que são sites de perguntas e respostas?
+        \item Deixar explícito que vou me referir a estes sites usando o termo sites \textit{Q\&A};
+        \item Mostrar exemplos de sites \textit{Q\&A} e introduzir o \textit{Stack Overflow};
+        \item Exibir números para enfatizar a grandeza e importância do \textit{Stack Overflow}: quantidade de usuários, volume de conteúdo gerado, tempo médio de obtenção de resposta para as perguntas feitas no site, etc.; 
+        \item Visão geral de como tais sites estão estudados na literatura;
+        \item Falar do Forrósquare aqui:
+            \begin{itemize}
+                \item O que era o projeto Forrósquare?
+                \item Quando, onde e como aconteceu?
+                \item Qual era o intuito?
+                \item O que se descobriu com os dados gerados pelo Forrósquare?
+                \item Explicar que, graças ao Forrósquare, os pesquisadores se perguntaram a relação entre compartilhamento de perguntas em redes sociais e os sites \textit{Q\&A} (explicar como se chegou a tal questionamento);
+            \end{itemize}
+        \item Explicar, resumidamente, o que foi feito a partir do Forrósquare e os resultados obtidos:
+            \begin{itemize}
+                \item Entendi como funciona o compartilhamento de perguntas de sites \textit{Q\&A} do ponto de vista dos usuários;
+                \item Vi o que os dados quantitativos reais do Stack Overflow me disseram sobre a questão do compartilhamento;
+                \item A partir do estudo qualitativo, defini 3 propostas de \textit{design} e vi como os usuários se comportaram em relação a elas por meio do umaforcaso.pt;
+                \item Vi o que os dados quantitativos reais do umaforcaso.pt me disseram sobre a questão do compartilhamento;
+                \item Minhas conclusões gerais do trabalho.
+            \end{itemize}
 \end{itemize}
 
 \section{Motivação}
+    Discutir aqui a motivação deste trabalho:
+    \begin{itemize}
+        \item Investigar o que pode trazer mais conteúdo satisfatório (resposta para perguntas) é algo bem presente na literatura. Então, sempre existe demanda para investigar novas maneiras de fazer isto. Aqui eu vou investigar se o compartilhamento de perguntas pode ajudar, neste sentido, o Stack Overflow. Sendo assim, esta é uma motivação;
+        \item Mostrar que as redes sociais estão bastante presentes na Internet e praticamente todos os sites possuem algum tipo de integração com elas (o que vai ser uma deixa para o item abaixo);
+        \item Uma das integrações de sites \textit{Q\&A} com as redes sociais é o botão de compartilhar, mas só existem esforços na literatura para obter obter/melhorar respostas, traçar perfis de usuários, elencar tipo de conteúdo gerado, etc. O fato de não haver nenhum estudo sobre isto na literatura é outra motivação.
+    \end{itemize}
+    \section{Objetivos}
 \begin{itemize}
-\item As redes sociais estão bastante presentes na Internet e praticamente todos os sites possuem algum tipo de integração com elas (CITAR FONTES);
-\item Existem esforços na literatura para obter obter/melhorar respostas, etc., como foi dito anteriormente... mas não foi encontrado nenhum esforço para estudar como o compartilhamento em redes sociais pode entrar na jogada.
-\end{itemize}
-\section{Objetivos}
-\begin{itemize}
-\item Analisar como as pessoas se comportam ao decidir compartilhar ou não uma pergunta de um site q\&a em alguma rede social;
-\item Inferir possíveis cenários que podem influenciar esta decisão;
-\item Explorar tais cenários com o intuito de identificar os efeitos dos mesmos, se houver, na decisão de compartilhar ou não uma pergunta em alguma rede social.
-\end{itemize}
-\section{Contribuições Esperadas}
-\begin{itemize}
-\item Uma análise do comportamento dos usuários de sites q\&a em relação ao compartilhamento;
-\item Uma análise sobre a influência do compartilhamento de perguntas na obtenção, ou não, de respostas em sites q\&a;
-\item Uma análise sobre a interferência de certos cenários na tentativa de promover o compartilhamento de perguntas em sites de q\&a e as influências dos compartilhamentos nos cenários na obtençãom, ou não, de respostas.
+    \item Objetivo geral: a realização de um estudo sobre a relação existente entre compartilhamento de conteúdo em redes sociais e sites \textit{Q\&A}, já que nenhum estudo do tipo foi encontrado na literatura da área (mais detalhes da literatura na seção \textit{Background});
+    \item Objetivos específicos:
+    \begin{itemize}
+        \item Entender como usuários de sites \textit{Q\&A} se comportam ao compartilhar, nas suas redes sociais, perguntas destes sites. As seguintes perguntas deverão ser respondidas por este estudo (tais perguntas deverão estar aqui, mas as respectivas respostas deverão aparecer mais adiante na dissertação):
+            \begin{itemize}
+                \item Este comportamento de compartilhar é comum? Por quê?
+                \item Como os usuários decidem se devem ou não compartilhar uma pergunta?
+                \item Que tipo de pergunta de \textit{sites Q\&A}, tipicamente, se compartilha em redes sociais?
+                \item Qual o intuito de se realizar tal compartilhamento?
+                \item Na visão dos usuários, compartilhar faz alguma diferença positiva ou negativa?
+            \end{itemize}
+        
+        \item Descobrir, via estudo de caso, se existe alguma maneira de promover o compartilhamento de perguntas de sites \textit{Q\&A} que seja mais eficiente (que atraia mais conteúdo para os sites) do que a maneira já existente nos sites atualmente;
+      
+        \item Descobrir se há evidências de que o compartilhamento de perguntas de sites \textit{Q\&A} traz alguma contribuição positiva para estes sites. Para isto, é necessário:
+            \begin{itemize}
+                \item Elaborar um estudo de caso, analisando quantitativamente os dados reais de sites \textit{Q\&A}, no que diz respeito ao compartilhamento de perguntas, com o intuito de descobrir se existe alguma relação entre os fatos de uma pergunta ter sido compartilhada e ter obtido alguma resposta útil do ponto de vista do seu autor;
+                \item A mesma análise do item acima deverá ser feita com os dados gerados pelo site www.umaforcaso.pt.
+            \end{itemize}
+    \end{itemize}
 \end{itemize}
 
 \section{Estrutura do Documento}
-Colocar aqui a estrutura deste documento (o que o leitor vai encontrar em cada parte do texto).
+    \begin{itemize}
+        \item Colocar aqui como o documento está estruturado e o que o leitor deverá encontrar em cada parte.
+    \end{itemize}
